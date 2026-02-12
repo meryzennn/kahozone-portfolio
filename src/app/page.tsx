@@ -29,6 +29,7 @@ function StructuredData() {
         name: siteConfig.name,
         url,
         jobTitle: "3D Artist",
+        email: `mailto:${siteConfig.email}`,
         sameAs: [siteConfig.socials.instagram].filter(Boolean),
       },
       {

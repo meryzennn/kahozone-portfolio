@@ -7,8 +7,8 @@ export type VimeoVideo = {
 // Stores a single Vimeo video for the one-page site.
 export const showreel: VimeoVideo = {
   provider: "vimeo",
-  id: "76979871",
-  title: "Showreel",
+  id: "1164352926",
+  title: "",
 };
 
 // Returns the single showreel video.

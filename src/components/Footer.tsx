@@ -21,18 +21,29 @@ export function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-// Renders a raw footer that acts as the only contact: Instagram.
+// Renders the footer as the only contact section with the exact IG-style copy.
 export function Footer() {
   return (
     <footer className="mt-16">
-      <div className="mx-auto max-w-6xl px-6 pb-12 pt-8">
+      <div className="mx-auto max-w-6xl px-6 pb-12 pt-10">
         <div className="text-center">
-          <p className="mx-auto max-w-2xl text-sm text-zinc-600">
-            Minimal process. Clean delivery. If the work fits, send a short
-            brief + deadline.
+          <p className="font-display text-3xl text-zinc-950">Contact</p>
+
+          <p className="mt-4 text-sm text-zinc-700">
+            Small place with big dream.
           </p>
 
-          <div className="mt-4">
+          <p className="mt-2 text-sm text-zinc-600">
+            For commission work or inquiry hit DM /{" "}
+            <Link
+              href={`mailto:${siteConfig.email}`}
+              className="underline hover:text-black"
+            >
+              {siteConfig.email}
+            </Link>
+          </p>
+
+          <div className="mt-6">
             <Link
               href={siteConfig.socials.instagram}
               target="_blank"
@@ -43,7 +54,7 @@ export function Footer() {
             </Link>
           </div>
 
-          <div className="mt-8 text-xs text-zinc-500">
+          <div className="mt-10 text-xs text-zinc-500">
             © {new Date().getFullYear()} KAHOZONE
           </div>
         </div>
