@@ -18,35 +18,24 @@ const display = Cormorant_Garamond({
   display: "swap",
 });
 
-// Defines global site metadata for SEO, Open Graph, and canonical URL.
+// Defines global site metadata for SEO and site icons/manifest.
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: siteConfig.title,
   description: siteConfig.description,
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    type: "website",
-    url: "/",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    // Optional: add a real image later like "/og.jpg" in /public
-    // images: [{ url: "/og.jpg", width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteConfig.title,
-    description: siteConfig.description,
-    // images: ["/og.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+
+  // This matches: <link rel="manifest" href="/site.webmanifest">
+  manifest: "/site.webmanifest",
+
+  // This matches your favicon + apple touch icon tags
+  icons: {
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+    ],
   },
 };
 
